@@ -1,13 +1,10 @@
-var angular=require('angular');
+var danielaAppdradre=require('angular').module('danielaAndradeApp');
 
-var danielaAndradeApp = angular.module('danielaAndradeApp', []);
-//agregar popup para video
-//agregar html de track como template y con browserify agregarlos al js final
-//hacer ejemplo directo con browserify y despues con gulp
-//separar css
-/*danielaAndradeApp.controller('TrackListController', function TrackListController($scope) {
-   Traer los track desde un servicio
-   $scope.tracks = [
+danielaAppdradre.component("trackList",{
+	templateUrl:'scripts/components/trackList/tracklist.html',
+	controller:'trackListController'
+}).controller('trackListController', ['$scope', '$http', function($scope,$htpp){
+	$scope.tracks = [
       {
          chapter: 1,
          title: 'Digital Age',
@@ -37,8 +34,4 @@ var danielaAndradeApp = angular.module('danielaAndradeApp', []);
          available: false
       },
    ];
-});*/
-
-require('./components');
-require('./services');
-
+}]);
