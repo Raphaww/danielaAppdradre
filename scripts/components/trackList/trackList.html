@@ -1,0 +1,15 @@
+<div class="artist-tracks">
+   <div class="box box_middle artist-tracks-track" ng-repeat="track in tracks">
+      <div class="box-background artist-tracks-track-bg_{{track.backgroundClass}}"></div>
+      <div class="box-top"></div>
+      <div class="box-title box-middle">
+         <h4><p>Chapter {{track.chapter}}</p></h4>
+         <h2 data-content-field="title">{{track.title}}</h2>
+      </div>
+      <div class="box-bottom box-middle">
+         <div class="small_bottom">
+            <button ng-disabled="!track.available" href="{{track.video}}" target="_blank" class="button button--half" data-show-fullscreen="{{track.videp}}">{{track.available?"Watch the video": "Comming soon"}}</button>
+         </div>
+      </div>
+   </div>
+</div>
