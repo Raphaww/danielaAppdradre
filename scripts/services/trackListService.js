@@ -1,8 +1,4 @@
-var danielaAppdradre = require('angular').module('danielaAppdradre');
-
-danielaAppdradre.service('Tracks', ['$q','$http', function($q,$http){
-
-
+module.exports = function($q,$http){
 this.get = function(chapter){
 var deferred = $q.defer();
 
@@ -47,4 +43,4 @@ return deferred.promise();
 }
 
 
-}]);
+}
