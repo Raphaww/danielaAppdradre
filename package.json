@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "browserify scripts/app.js -o scripts/bundle.js",
+    "buildProd": "browserify scripts/app.js | uglifyjs -o scripts/bundle.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "raphael.isidro",
   "license": "ISC",
   "dependencies": {
-    "ng-dialog": "^0.6.2"
+    "angular": "^1.5.8",
+    "gulp": "^3.9.1",
+    "ng-dialog": "^0.6.2",
+    "uglify": "^0.1.5"
   }
 }
