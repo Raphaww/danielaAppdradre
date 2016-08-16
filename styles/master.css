@@ -121,24 +121,24 @@ h2.h2--logo {
    text-align: center;
 }
 .artist-front-bg{
-   background-image: url("https://static1.squarespace.com/static/56b51f991bbee005801027cb/t/576063172fe1319a3da54ab0/1465934616096/daniela_EP_banner_vF_UPLOAD_V2_low.jpg");
+   background-image: url("../images/daniela_EP_banner_vF_UPLOAD_V2_low.jpg");
    background-size: contain;
    background-repeat: no-repeat;
 }
 /*end-front*/
 /*digitalAge*/
 .artist-tracks-track-bg_digitalAge{
-   background-image: url("http://static1.squarespace.com/static/56b51f991bbee005801027cb/56b7a4fa7da24ff043517485/56b7a5424d088e8898283339/1467167146823/daniela_digitalage_banner_vF_UPLOAD.jpg");
+   background-image: url("../images/daniela_digitalage_banner_vF_UPLOAD.jpg");
 }
 /**end-digitalAge/
 /*sound*/
 .artist-tracks-track-bg_sound{
-   background-image: url("https://res.cloudinary.com/deming/image/fetch/http://static1.squarespace.com/static/56b51f991bbee005801027cb/56b7a4fa7da24ff043517485/56c66a6b1d07c0d163f917b5/1468961856530/daniela_sound_banner_vF_UPLOAD.jpg");
+   background-image: url("../images/daniela_sound_banner_vF_UPLOAD.jpg");
 }
 /*end-sound*/
 /*comeAround*/
 .artist-tracks-track-bg_comeAround{
-   background-image: url("https://res.cloudinary.com/deming/image/fetch/http://static1.squarespace.com/static/56b51f991bbee005801027cb/56b7a4fa7da24ff043517485/56c66ad6356fb004b9657dae/1470776864145/daniela_comearound_banner_vF_UPLOAD.jpg");
+   background-image: url("../images/daniela_comearound_banner_vF_UPLOAD.jpg");
 }
 /*end-comeAround*/
 /*shore*/
