@@ -1,0 +1,148 @@
+/*Header*/
+html {
+   font: 15px / 1.4 "proxima-nova",sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -webkit-tap-highlight-color: rgba(210,206,171,.2);
+   -moz-osx-font-smoothing: grayscale;
+}
+body{
+   color: #d2ceab;
+}
+h1, h2, h3, h4, h5, h6 {
+   font-family: "proxima-nova",sans-serif;
+   font-weight: normal;
+   text-transform: uppercase;
+   letter-spacing: .5em;
+   color: inherit;
+   margin: 0 -.5em 20px 0;
+}
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 30px;
+}
+h4{
+   font-size: 15px;
+   letter-spacing: .25em;
+}
+button, .button {
+    display: inline-block;
+    cursor: pointer;
+    font-family: "proxima-nova",sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: .25em;
+    color: #d2ceab;
+    background: transparent;
+    position: relative;
+    padding: 13.3333333333px 25px 11.4285714286px;
+    border: 1px solid;
+    -ms-transition: background .333s,color .333s,border-color .333s,opacity .333s;
+    -webkit-transition: background .333s,color .333s,border-color .333s,opacity .333s;
+    transition: background .333s,color .333s,border-color .333s,opacity .333s;
+}
+button[disabled]{
+   opacity: .5;
+   pointer-events: none;
+}
+::selection {
+   color: #000010;
+   background: #d2ceab;
+}
+*,*:before,*:after{
+   box-sizing: border-box;
+}
+.box{
+   padding: 60px 90px;
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: space-between;
+   justify-content: flex-end;
+   min-height: 55vw;
+}
+.box-background{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   width: 100%;
+   height: 100%;
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+.box-top{
+   width: 100%;
+}
+.box-title{
+   padding-top: 90px;
+   width: 100%;
+}
+.box-title-logotype{
+   padding: 22.5px 90px;
+}
+.box-bottom{
+   width: 100%;
+}
+.box_middle{
+   padding: 90px 180px;
+   width: 100%;
+   align-content: center;
+}
+.box-middle{
+   padding: 0;
+   width: 51%;
+}
+.box.box_middle:nth-child(2n){
+   justify-content: flex-start;
+}
+
+/*endHeader*/
+/*front*/
+h1.h1--logotype {
+    text-align: center;
+    letter-spacing: .5em;
+    word-spacing: 30px;
+}
+h2.h2--logo {
+    text-align: center;
+    letter-spacing: 1.2em;
+}
+.grid{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.artist-front-bottom-text{
+   max-width: 22rem;
+   text-align: center;
+}
+.artist-front-bg{
+   background-image: url("https://static1.squarespace.com/static/56b51f991bbee005801027cb/t/576063172fe1319a3da54ab0/1465934616096/daniela_EP_banner_vF_UPLOAD_V2_low.jpg");
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+/*end-front*/
+/*digitalAge*/
+.artist-tracks-track-bg_digitalAge{
+   background-image: url("http://static1.squarespace.com/static/56b51f991bbee005801027cb/56b7a4fa7da24ff043517485/56b7a5424d088e8898283339/1467167146823/daniela_digitalage_banner_vF_UPLOAD.jpg");
+}
+/**end-digitalAge/
+/*sound*/
+.artist-tracks-track-bg_sound{
+   background-image: url("https://res.cloudinary.com/deming/image/fetch/http://static1.squarespace.com/static/56b51f991bbee005801027cb/56b7a4fa7da24ff043517485/56c66a6b1d07c0d163f917b5/1468961856530/daniela_sound_banner_vF_UPLOAD.jpg");
+}
+/*end-sound*/
+/*comeAround*/
+.artist-tracks-track-bg_comeAround{
+   background-image: url("https://res.cloudinary.com/deming/image/fetch/http://static1.squarespace.com/static/56b51f991bbee005801027cb/56b7a4fa7da24ff043517485/56c66ad6356fb004b9657dae/1470776864145/daniela_comearound_banner_vF_UPLOAD.jpg");
+}
+/*end-comeAround*/
+/*shore*/
+.artist-tracks-track-bg_shore{
+   background-image: url("https://res.cloudinary.com/deming/image/fetch/http://static1.squarespace.com/static/56b51f991bbee005801027cb/56b7a4fa7da24ff043517485/56c66a04cf80a157220de2df/1465840591105/daniela_shore_banner_vF_UPLOAD.jpg");
+}
+/*endShore*/

@@ -1,0 +1,43 @@
+<html>
+<head>
+   <link rel="stylesheet" href="styles/reset.css" />
+   <link rel="stylesheet" href="styles/master.css" />
+</head>
+<body ng-app="danielaAndradeApp">
+   <div class="artist" ng-controller="TrackListController">
+      <div class="box">
+         <div class="box-background artist-front-bg"></div>
+         <div class="box-top"></div>
+         <div class="box-title">
+            <h1 class="h1--logotype" data-content-field="site-title">Daniela Andrade</h1>
+            <h2 class="h2--logo">Sh<span>o</span>re</h2>
+         </div>
+         <div class="box-bottom">
+            <div class="grid ">
+               <div class="artist-front-bottom-text">
+                  <h4>Discover the story behind her breakout EP</h4>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="artist-tracks">
+         <div class="box box_middle artist-tracks-track" ng-repeat="track in tracks">
+            <div class="box-background artist-tracks-track-bg_{{track.backgroundClass}}"></div>
+            <div class="box-top"></div>
+            <div class="box-title box-middle">
+               <h4><p>Chapter {{track.chapter}}</p></h4>
+               <h2 data-content-field="title">{{track.title}}</h2>
+            </div>
+            <div class="box-bottom box-middle">
+               <div class="small_bottom">
+                  <button ng-disabled="!track.available" href="{{track.video}}" target="_blank" class="button button--half" data-show-fullscreen="{{track.videp}}">{{track.available?"Watch the vide": "Comming soon"}}</button>
+               </div>
+            </div>
+         </div>
+      <div id="scripts">
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+         <script src="scripts/app.js"></script>
+      </div>
+   </div>
+</body>
+</html>
