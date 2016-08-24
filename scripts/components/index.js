@@ -1,9 +1,11 @@
 var danielaAppdrade = require('angular').module('danielaAndradeApp');
 
+//danielaAppdrade.service('Tracks',('$q'));
 danielaAppdrade.component("trackList", {
 	templateUrl: 'scripts/components/trackList/trackList.html',
 	controller: 'trackListController'
-}).controller('trackListController',['$scope','$http',function($scope,$http) {
+}).controller('trackListController')
+/*.controller('trackListController',['$scope','$http',function($scope,$http) {
    $scope.tracks = [
 		{
          chapter: 1,
@@ -34,4 +36,4 @@ danielaAppdrade.component("trackList", {
          available: false
 		},
 	];
-	}]);
+	}]);*/
