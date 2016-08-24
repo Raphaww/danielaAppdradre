@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/stylesheets/css/animate.css">
+<link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
+<link rel="stylesheet" href="/stylesheets/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="/stylesheets/css/color.css">
+<link rel="stylesheet" href="/stylesheets/css/font-awesome.min.css">
+<link rel="stylesheet" href="/stylesheets/css/jquery.timepicker.css">
+<link rel="stylesheet" href="/stylesheets/css/jquery-ui.min.css">
+<link rel="stylesheet" href="/stylesheets/css/meanmenu.min.css">
+<link rel="stylesheet" href="/stylesheets/css/owl.carousel.css">
+<link rel="stylesheet" href="/stylesheets/css/responsive.css">
+  
+  <h1 class="button">@model.title</h1>
+  <p>Bienvenido @model.title</p>
+  
+  @JSON.stringify(model.movie)
+  <br>
+  <br>
+  @for(x in model.movie){
+  <p><img src="@model.movie[x].Image"/></p>
+
+}
