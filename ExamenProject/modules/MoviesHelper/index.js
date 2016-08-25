@@ -34,9 +34,9 @@ var finder = {
 
            for(key in options){
                if(options.hasOwnProperty(key) && mapper.hasOwnProperty(key)){
-                   if(key == 'type' && options[key] != self.TYPE.MOVIE
-                   &&  options[key] != self.TYPE.SERIE
-                   &&  options[key] != self.TYPE.EPISODE){
+                   if(key == 'type' && options[key] != self.TYPES.MOVIE
+                   &&  options[key] != self.TYPES.SERIE
+                   &&  options[key] != self.TYPES.EPISODE){
                        continue; 
                    }
                    queryString += mapper[key] + '=' +options[key]+'&';
@@ -76,7 +76,7 @@ Object.defineProperties(finder,{
         writable: false, 
         value:{
             MOVIE:'movie',
-            SERIE: 'serie',
+            SERIE: 'series',
             EPISODE: 'episode'
         } 
     },
