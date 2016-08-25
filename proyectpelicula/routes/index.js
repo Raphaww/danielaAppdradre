@@ -24,15 +24,8 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET review page. */
-router.get('/reviews.html', function(req, res, next) {
-	
-	movieHelper.getRandomSearchMovie().then(function(a){
-	movieHelper.search({title:'Big Hero 6'}).then(function(b){
-		movieHelper.getRandomSearchSeries().then(function(c){
-	  res.render('index', { title: 'Express',movies:a ,movie:b ,series:c});
-			});
-		});	
-	});
+router.get('/reviews', function(req, res, next) {
+  res.render('reviews', { title: 'Express' });
 });
 
 module.exports = router;
