@@ -59,24 +59,26 @@ var finder = {
         return request({url: queryString});
     },
     getRandomSearch : function(){
-        var feed = 'abcdefghijklmnopqrsstuv';
+		var vocal = 'aeiou';
+        var feed = 'bcdfghjklmnpqrstv';
         var randomSearch = '';
 
-        for(i = 0; i < 2; i++){
+        
             randomSearch += feed[(Math.ceil(Math.random()*100))%feed.length];
-        }
+			randomSearch += vocal[(Math.ceil(Math.random()*100))%vocal.length];
+       
 
         return this.search({query : randomSearch});
         
     },
 	getRandomSearchMovie : function(){
-        var feed = 'abcdefghijklmnopqrsstuv';
+        var vocal = 'aeiou';
+        var feed = 'bcdfghjklmnpqrstv';
         var randomSearch = '';
 
-        for(i = 0; i < 2; i++){
-            randomSearch += feed[(Math.ceil(Math.random()*100))%feed.length];
-        }
-
+			randomSearch += feed[(Math.ceil(Math.random()*100))%feed.length];
+			randomSearch += vocal[(Math.ceil(Math.random()*100))%vocal.length];
+			
         var busqueda = this.search({query : randomSearch,type:'movie'});
 		if(busqueda == undefined)
 		{
@@ -89,12 +91,12 @@ var finder = {
         
     },
 	getRandomSearchSeries : function(){
-        var feed = 'abcdefghijklmnopqrsstuv';
+        var vocal = 'aeiou';
+        var feed = 'bcdfghjklmnpqrstv';
         var randomSearch = '';
 
-        for(i = 0; i < 2; i++){
-            randomSearch += feed[(Math.ceil(Math.random()*100))%feed.length];
-        }
+			randomSearch += feed[(Math.ceil(Math.random()*100))%feed.length];
+			randomSearch += vocal[(Math.ceil(Math.random()*100))%vocal.length];
 		var busqueda = this.search({query : randomSearch,type:'series'});
 		if(busqueda == undefined)
 		{

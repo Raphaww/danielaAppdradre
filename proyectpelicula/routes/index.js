@@ -6,6 +6,14 @@ var options = {
 	year:2000
 }
 
+/* GET review page. */
+/*
+router.get('/reviews', function(req, res, next) {
+  movieHelper.getRandomSearch().then(function(a){
+  res.render('reviews', { title: 'Express',reviews:a });
+	});
+});*/
+
 /* GET home page. */
 /*
 router.get('/', function(req, res, next) {
@@ -23,9 +31,5 @@ router.get('/', function(req, res, next) {
 	});
 });
 
-/* GET review page. */
-router.get('/reviews', function(req, res, next) {
-  res.render('reviews', { title: 'Express' });
-});
 
 module.exports = router;

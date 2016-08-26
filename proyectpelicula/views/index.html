@@ -3,7 +3,6 @@
   
 	@html.block('full', function(model){
 		@html.block('main', function(main){
-		<p>@JSON.stringify(model.movies);</p>
 			<div class="header">
 			<div class="top-header">
 				<div class="logo">
@@ -35,7 +34,7 @@
 					
 					<li><img src="@movies.Poster" alt=""/>
 					<form action="https://www.google.com.mx">
-					<input type="submit" value="<h4>@movies.Title</h4>">
+					<h5><input type="submit" value="@movies.Title"></h5>
 						
 					</form>
 					</li>
@@ -43,7 +42,10 @@
 					}
 					else{
 					<li><img src="https://pbs.twimg.com/profile_images/2404967299/6g661dowv4ov3dbmybjd.gif" alt=""/>
-						<h4>@movies.Title</h4>
+					<form action="https://www.google.com.mx">
+					<h5><input type="submit" value="@movies.Title"></h5>
+						
+					</form>
 					</li>
 					}
 				})
