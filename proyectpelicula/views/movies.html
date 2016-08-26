@@ -9,8 +9,8 @@
 					<p>Peliculas DVAROB</p>
 				</div>
 				<div class="search v-search">
-					<form>
-						<input type="text" value="Search.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search..';}"/>
+					<form action="/movies">
+						<input type="text" value="Search.." id="btn" ng-change="searches" ng-model="title"/>
 						<input type="submit" value="">
 					</form>
 				</div>
@@ -56,6 +56,33 @@
 					}
 				})
 		</ul>
+		<script>
+		  angular.module('Angu', [])
+			.controller('contro', ['$scope', function($scope) {
+				 
+				
+			var $scope.searches = function(title){
+			$http.post({
+				url: 'http://localhost:3000/movies', 
+				type: 'POST', 					
+				success: function(data) {
+					$('#conlist').html('');
+					$.each(data.Search, function(i,movie){
+							$('#conlist').append(inicio+'Titulo:'+movie.Title+fin);
+							$('#conlist').append(inicio+'Categoria:'+movie.Type+fin);
+							$('#conlist').append(inicio+'Year:'+movie.Year+fin);
+							if(movie.Poster!="N/A"){
+								$('#conlist').append('<p><img src='+movie.Poster+'/></p>')
+							}
+							else{
+								$('#conlist').append('<p><img src='+"https://pbs.twimg.com/profile_images/2404967299/6g661dowv4ov3dbmybjd.gif"+'/></p>')
+							}
+							})
+					  }
+				});
+				}
+			}]);
+		</script>
 			<script type="text/javascript">
 		$(window).load(function() {
 			
