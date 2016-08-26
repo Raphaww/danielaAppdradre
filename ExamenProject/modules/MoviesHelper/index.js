@@ -58,15 +58,14 @@ var finder = {
 
         return request({url: queryString});
     },
-    getRandomSearch : function(){
-        var feed = 'abcdefghijklmnopqrsstuv';
+    getRandomSearch : function(tipo)
+	{
+        var vocales = 'aeiou';
+        var consonantes = 'bcdfghjklmnpqrst';
         var randomSearch = '';
-
-        for(i = 0; i < 2; i++){
-            randomSearch += feed[(Math.ceil(Math.random()*100))%feed.length];
-        }
-
-        return this.search({query : randomSearch});
+		randomSearch += consonantes[(Math.ceil(Math.random()*100))%consonantes.length];
+		randomSearch += vocales[(Math.ceil(Math.random()*100))%vocales.length];
+        return this.search({query : randomSearch, type:tipo});
         
     }
 };

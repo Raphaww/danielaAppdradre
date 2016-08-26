@@ -3,14 +3,15 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="keywords" content="Movie_store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<link href="/stylesheets/bootstrap.css" rel='stylesheet' type='text/css' />
 		<link href="/stylesheets/style.css" rel="stylesheet" type="text/css" media="all" />
 		<link rel="stylesheet" href="/stylesheets/main.css" />
+		<link rel="stylesheet" href="/stylesheets/feature-carousel.css" charset="utf-8" />
 		<!-- start plugins -->
-		<script type="text/javascript" src="/javascripts/jquery-1.11.1.min.js"></script>
+		<script src="/javascripts/jquery-1.7.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/javascripts/jquery.featureCarousel.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/javascripts/angular.min.js" type="text/javascript" charset="utf-8"></script>
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 		<script src="/javascripts/responsiveslides.min.js"></script>
 		<script>
@@ -25,7 +26,7 @@
 			});
 		</script>
 	</head>
-	<body>
+	<body ng-app="myApp">
 		<div class="container">
 			@html.block('container')
 		</div>
@@ -40,12 +41,8 @@
 					<div id="footer-widgets" class="gp-footer-larger-first-col">
 						<div class="gp-container">
 							<div class="footer-widget footer-1">
-								<div class="wpb_wrapper">
-									<img src="images/f_logo.png" alt=""/>
-								</div> 
-								<br>
-								<p>It is a long established fact that a reader will be distracted by the readable content of a page.</p>
-								<p class="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+								<p>Listado de películas y series desde una API, de forma rápida podemos encontrar una gran diversidad.</p>
+								<p class="text">Esta es la página principal, dentro de dicha página podemos dirigirnos a otros resultados dependiendo de lo que se busque.</p>
 							</div>
 							<div class="footer_box">
 								<div class="col_1_of_3 span_1_of_3">

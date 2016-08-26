@@ -17,12 +17,4 @@ router.get('/', function(req, res, next) {
   });
 });
 
-/* GET single page. */
-router.get('/single/:id', function(req, res, next) {
-	console.log(req.params.id);
-	movieHelper.getDetail(String(req.params.id)).then(function(result) {
-		res.render('single', { title: 'Single movie', singleMovie: result});
-	});
-});
-
 module.exports = router;

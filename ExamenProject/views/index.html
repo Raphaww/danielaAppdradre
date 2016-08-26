@@ -1,19 +1,6 @@
 @html.extend('layout',function(model) {
 	@html.block('container',function(model) {
 		<div class="container_wrap">
-			<div class="header_top">
-				<div class="col-sm-12 nav">
-				  <ul>
-					 <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="comic"><a href="movie.html"> </a></span></li>
-					 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="movie"><a href="movie.html"> </a> </span></li>
-					 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="video"><a href="movie.html"> </a></span></li>
-					 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="game"><a href="movie.html"> </a></span></li>
-					 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="tv"><a href="movie.html"> </a></span></li>
-					 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="more"><a href="movie.html"> </a></span></li>
-				 </ul>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
 			<div class="slider">
 				<div class="callbacks_container">
 					<ul class="rslides" id="slider">
@@ -130,14 +117,13 @@
 					</ul>
 				</div>
 			</div>
-			<p>@JSON.stringify(model.thep)</p>
 			<section id="one" class="tiles">
 				<article>
 					<span class="image">
 						<img src="images/movie1.jpg" alt="" />
 					</span>
 					<header class="major">
-						<h3><a href="landing.html" class="link">LISTA DE PELÍCULAS</a></h3>
+						<h3><a href="/movies" class="link">LISTA DE PELÍCULAS</a></h3>
 						<p>CAPTAIN AMERICA</p>
 					</header>
 				</article>
@@ -146,7 +132,7 @@
 						<img src="images/serie1.jpg" alt="" />
 					</span>
 					<header class="major">
-						<h3><a href="landing.html" class="link">LISTA DE SERIES</a></h3>
+						<h3><a href="/series" class="link">LISTA DE SERIES</a></h3>
 						<p>SMALLVILLE</p>
 					</header>
 				</article>
@@ -155,7 +141,7 @@
 						<img src="images/serie2.jpg" alt="" />
 					</span>
 					<header class="major">
-						<h3><a href="landing.html" class="link">LISTA DE SERIES</a></h3>
+						<h3><a href="/series" class="link">LISTA DE SERIES</a></h3>
 						<p>SUITS</p>
 					</header>
 				</article>
@@ -164,7 +150,7 @@
 						<img src="images/movie2.jpg" alt="" />
 					</span>
 					<header class="major">
-						<h3><a href="landing.html" class="link">LISTA DE PELÍCULAS</a></h3>
+						<h3><a href="/movies" class="link">LISTA DE PELÍCULAS</a></h3>
 						<p>THOR</p>
 					</header>
 				</article>
@@ -173,7 +159,7 @@
 						<img src="images/movie3.jpg" alt="" />
 					</span>
 					<header class="major">
-						<h3><a href="landing.html" class="link">LISTA DE PELÍCULAS</a></h3>
+						<h3><a href="/movies" class="link">LISTA DE PELÍCULAS</a></h3>
 						<p>IRON MAN</p>
 					</header>
 				</article>
@@ -182,7 +168,7 @@
 						<img src="images/serie3.jpg" alt="" />
 					</span>
 					<header class="major">
-						<h3><a href="landing.html" class="link">LISTA DE SERIES</a></h3>
+						<h3><a href="/series" class="link">LISTA DE SERIES</a></h3>
 						<p>THE ORIGINALS</p>
 					</header>
 				</article>

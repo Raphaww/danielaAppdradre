@@ -9,6 +9,9 @@ var vash = require('vash');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var single = require('./routes/single');
+var movies = require('./routes/movies');
+var series = require('./routes/series');
 
 var app = express();
 
@@ -27,6 +30,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/', single);
+app.use('/', movies);
+app.use('/', series);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

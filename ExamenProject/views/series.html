@@ -1,0 +1,95 @@
+@html.extend('layout',function(model) {
+	@html.block('container',function(model) {
+		<div class="container_wrap" ng-controller="myCtrl">
+			<div class="content">
+				<h1 class="display-1">LISTADO DE SERIES ALEATORIAS</h1>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<br/><br/>
+							<div id="custom-search-input">
+								<div class="input-group col-md-12">
+									<input type="text" class="form-control input-lg" placeholder="Buscar" ng-change="myFunc(myValue)" ng-model="myValue"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br/><br/>
+				<div class="carousel-container">    
+					<div id="carousel">
+						@model.moviesRandom.Search.forEach(function(movie) {
+							<div class="carousel-feature">
+								@if(@movie.Poster != 'N/A')
+								{
+									<a href="/single/@movie.imdbID"><img class="carousel-image" alt="Image Caption" src="@movie.Poster" style="width:300px;height:400px"></a>
+								}
+								else
+								{
+									<a href="/single/@movie.imdbID"><img class="carousel-image" alt="Image Caption" src="/images/notfound.jpg" style="width:300px;height:450px"></a>
+								}
+								<div class="carousel-caption">
+									<p>@movie.Title</p>
+								</div>
+							</div>
+						})
+					</div>				
+					<div id="carousel-left"><img src="images/arrow-left.png" /></div>
+					<div id="carousel-right"><img src="images/arrow-right.png" /></div>
+				</div>
+				<div class="down_btn"><a href="/" class="btn btn-info" role="button">Inicio</a></div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+		  $(document).ready(function() {
+			var carousel = $("#carousel").featureCarousel({
+			});
+
+			$("#but_prev").click(function () {
+			  carousel.prev();
+			});
+			$("#but_pause").click(function () {
+			  carousel.pause();
+			});
+			$("#but_start").click(function () {
+			  carousel.start();
+			});
+			$("#but_next").click(function () {
+			  carousel.next();
+			});
+		  });
+		</script>
+		
+		<script>
+			var app = angular.module("myApp",[]);	
+			app.controller('myCtrl', function($scope,$http,$filter,$document) 
+			{
+				$scope.myFunc = function(myValue) 
+				{
+					//Petición POST
+					$http.post("http://localhost:3000/series/"+myValue,{}).success(
+					function(data,status,header,config) {
+						$document.find('#carousel').html('');
+						angular.forEach(data.Search, function(movie, i) {
+							$document.find('#carousel').append('<div class="carousel-feature">');
+							if(movie.Poster != 'N/A')
+							{
+								$document.find('#carousel').append('<a href="/single/'+movie.imdbID+'"><img class="carousel-image" alt="Image Caption" src="'+movie.Poster+'" style="width:300px;height:400px"></a>');
+							}
+							else
+							{
+								$document.find('#carousel').append('<a href="/single/'+movie.imdbID+'"><img class="carousel-image" alt="Image Caption" src="/images/notfound.jpg" style="width:300px;height:450px"></a>');
+							}
+							$document.find('#carousel').append('</div>');
+						});
+					}).error(function(data,status,header,config) {
+						console.log("Error");
+					});
+				};
+			});
+		</script>
+	})
+	
+	@html.block('footer',function(model) {})
+})
